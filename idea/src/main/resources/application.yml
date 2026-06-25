@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/keshe?useSSL=false&characterEncoding=utf8
+    username: root
+    password: 123456
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: false # 自动驼峰转换
+  global-config:
+    db-config:
+      id-type: auto # ID自增策略
+      logic-delete-field: DelMark    # 首字母大写，匹配数据库字段
+      logic-delete-value: 1
+      logic-not-delete-value: 0
